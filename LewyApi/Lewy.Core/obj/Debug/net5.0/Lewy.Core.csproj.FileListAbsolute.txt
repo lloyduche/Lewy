@@ -1,0 +1,12 @@
+C:\Users\hp\source\repos\Lewy\LewyApi\Lewy.Core\bin\Debug\net5.0\Lewy.Core.deps.json
+C:\Users\hp\source\repos\Lewy\LewyApi\Lewy.Core\bin\Debug\net5.0\Lewy.Core.dll
+C:\Users\hp\source\repos\Lewy\LewyApi\Lewy.Core\bin\Debug\net5.0\ref\Lewy.Core.dll
+C:\Users\hp\source\repos\Lewy\LewyApi\Lewy.Core\bin\Debug\net5.0\Lewy.Core.pdb
+C:\Users\hp\source\repos\Lewy\LewyApi\Lewy.Core\obj\Debug\net5.0\Lewy.Core.csprojAssemblyReference.cache
+C:\Users\hp\source\repos\Lewy\LewyApi\Lewy.Core\obj\Debug\net5.0\Lewy.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\source\repos\Lewy\LewyApi\Lewy.Core\obj\Debug\net5.0\Lewy.Core.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\Lewy\LewyApi\Lewy.Core\obj\Debug\net5.0\Lewy.Core.AssemblyInfo.cs
+C:\Users\hp\source\repos\Lewy\LewyApi\Lewy.Core\obj\Debug\net5.0\Lewy.Core.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\Lewy\LewyApi\Lewy.Core\obj\Debug\net5.0\Lewy.Core.dll
+C:\Users\hp\source\repos\Lewy\LewyApi\Lewy.Core\obj\Debug\net5.0\ref\Lewy.Core.dll
+C:\Users\hp\source\repos\Lewy\LewyApi\Lewy.Core\obj\Debug\net5.0\Lewy.Core.pdb
