@@ -35,6 +35,7 @@ namespace LewyApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LewyApi", Version = "v1" });
             });
 
+            services.AddCors();
 
             services.AddDbContext<LewyContext>(options =>
             {
@@ -55,6 +56,11 @@ namespace LewyApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors( policy => 
+                policy.AllowAnyHeader()
+                      .AllowAnyMethod()
+                      .WithOrigins("http://localhost:4200"));
 
             app.UseAuthorization();
 
