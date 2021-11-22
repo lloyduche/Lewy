@@ -59,3 +59,13 @@ C:\Users\hp\source\repos\Lewy\LewyApi\LewyApi\obj\Debug\net5.0\LewyApi.dll
 C:\Users\hp\source\repos\Lewy\LewyApi\LewyApi\obj\Debug\net5.0\ref\LewyApi.dll
 C:\Users\hp\source\repos\Lewy\LewyApi\LewyApi\obj\Debug\net5.0\LewyApi.pdb
 C:\Users\hp\source\repos\Lewy\LewyApi\LewyApi\obj\Debug\net5.0\LewyApi.genruntimeconfig.cache
+C:\Users\hp\source\repos\Lewy\LewyApi\LewyApi\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\hp\source\repos\Lewy\LewyApi\LewyApi\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\hp\source\repos\Lewy\LewyApi\LewyApi\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\hp\source\repos\Lewy\LewyApi\LewyApi\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\hp\source\repos\Lewy\LewyApi\LewyApi\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\hp\source\repos\Lewy\LewyApi\LewyApi\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\hp\source\repos\Lewy\LewyApi\LewyApi\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\hp\source\repos\Lewy\LewyApi\LewyApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\hp\source\repos\Lewy\LewyApi\LewyApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\hp\source\repos\Lewy\LewyApi\LewyApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
