@@ -2,6 +2,7 @@ using Lewy.Core.Interfaces;
 using Lewy.Core.Services;
 using Lewy.Infrastructure;
 using LewyApi.Extensions;
+using LewyApi.MiddleWare;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -55,6 +56,7 @@ namespace LewyApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseMiddleware<ExceptionMiddleware>();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "LewyApi v1"));
             }
