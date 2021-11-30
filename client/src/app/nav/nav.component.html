@@ -1,25 +1,28 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container">
 
-        <a class="navbar-brand" href="#">Lewy</a>
+        <a class="navbar-brand" routerLink="/">Lewy</a>
 
 
-        <ul class="navbar-nav mr-auto" *ngIf="accountService.currentUser$ | async">
-            <li class="nav-item ">
-                <a class="nav-link" href="#">Matches</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Lists</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#">Messages</a>
-            </li>
+        <ul class="navbar-nav mr-auto">
+            <ng-container   *ngIf="accountService.currentUser$ | async">
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/members" routerLinkActive="active">Matches</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/lists" routerLinkActive="active">Lists</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/messages" routerLinkActive="active">Messages</a>
+                </li>
+            </ng-container>
+           
             
         </ul>
 
-        <div class="dropdown" *ngIf="accountService.currentUser$ | async" dropdown>
+        <div class="dropdown" *ngIf="(accountService.currentUser$ | async) let user" dropdown>
             <button class="btn btn-secondary dropdown-toggle" type="button" dropdownToggle>
-              Welcome User
+              Welcome {{user.username | titlecase}}
             </button>
             <div class="dropdown-menu mt-3  " *dropdownMenu>
               <a class="dropdown-item" href="#">Edit Profile</a>
