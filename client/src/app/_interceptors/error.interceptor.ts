@@ -28,13 +28,13 @@ export class ErrorInterceptor implements HttpInterceptor {
                       modalStateErrors.push(error.error.errors[key])
                     }   
                   }
-                  throw modalStateErrors;
-                }else{
-                  this.toastr.error(error.statusText, error.status);
+                  throw modalStateErrors.flat();
+                }else{ 
+                  this.toastr.error(error.statusText = 'Bad request' , error.status);
                 }
                 break;
               case  401:
-                this.toastr.error(error.statusText, error.status);
+                this.toastr.error(error.statusText = 'Unauthorized', error.status);
                 break;
 
               case 404:
@@ -48,7 +48,7 @@ export class ErrorInterceptor implements HttpInterceptor {
 
               default:
                 this.toastr.error('something unexpected went wrong');
-                console.error(error);              
+                console.log(error);              
                 break;
             }
           }
