@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "YUoRozGuepRpw30cIM2REtoiClBfEog91hrk07Ift9ZSuNnFGYrvBwRH9Qrfotevy7OIzNSMvPngNMePJlBVww==",
+  "dgSpecHash": "GldQXsCse9L+hWUl3rKUUyDi3JKVDimrc1TkspfOXWXr8/aa+IrvC3GzO95Kv8nkvHCorvlmtV/fjrmv2vbf4g==",
   "success": true,
   "projectFilePath": "C:\\Users\\hp\\source\\repos\\Lewy\\LewyApi\\Lewy.Infrastructure\\Lewy.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\hp\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.12\\microsoft.data.sqlite.core.5.0.12.nupkg.sha512",
@@ -38,6 +40,7 @@
     "C:\\Users\\hp\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.14.1\\system.identitymodel.tokens.jwt.6.14.1.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],

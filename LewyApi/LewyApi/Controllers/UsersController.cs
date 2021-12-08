@@ -1,4 +1,6 @@
-﻿using Lewy.Infrastructure;
+﻿using AutoMapper;
+using Lewy.Core.DTOs;
+using Lewy.Infrastructure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,32 +10,49 @@ using System.Threading.Tasks;
 
 namespace LewyApi.Controllers
 {
+    [Authorize]
     public class UsersController : BaseApiContoller
     {
-        private readonly LewyContext _context;
+        
+        private readonly IUserRepository _userRepository;
+        private readonly IMapper _mapper;
 
-        public UsersController(LewyContext context)
+        public UsersController(IUserRepository userRepository, IMapper mapper)
         {
-            _context = context;
+            _userRepository = userRepository;
+            _mapper = mapper;
+                            
         }
          
         [HttpGet("GetUsers")]
-        [AllowAnonymous]
+       
         public async Task<IActionResult> GetUsers()
-        { 
+        {
 
-           var users = _context.AppUsers.ToList();
+            var users = await _userRepository.GetMembersAsync();
 
             return Ok(users);
             
         }
 
-        [Authorize]
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUser(int id)
         {
 
-            var user = _context.AppUsers.FirstOrDefault(x => x.Id == id);
+            var user =await _userRepository.GetUserByIdAsync(id);
+
+            var userToReturn = _mapper.Map<MemberDto>(user);
+
+            return Ok(userToReturn);
+
+        }
+
+        [HttpGet("{username}")]
+        public async Task<IActionResult> GetUser(string username)
+        {
+
+            var user = await _userRepository.GetMemberAsync(username);
 
             return Ok(user);
 

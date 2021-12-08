@@ -3,14 +3,16 @@ using System;
 using Lewy.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Lewy.Infrastructure.Migrations
 {
     [DbContext(typeof(LewyContext))]
-    partial class LewyContextModelSnapshot : ModelSnapshot
+    [Migration("20211202225026_ExtentedUserEntity")]
+    partial class ExtentedUserEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
