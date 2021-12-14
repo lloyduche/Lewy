@@ -883,6 +883,7 @@
       },
       "Lewy.Infrastructure/1.0.0": {
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
           "Lewy.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.12"
         },

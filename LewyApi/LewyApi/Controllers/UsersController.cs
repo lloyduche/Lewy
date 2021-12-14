@@ -48,8 +48,8 @@ namespace LewyApi.Controllers
 
         }
 
-        [HttpGet("{username}")]
-        public async Task<IActionResult> GetUser(string username)
+        [HttpGet("UserName/{UserName}")]
+        public async Task<IActionResult> GetUserbyUsername(string username)
         {
 
             var user = await _userRepository.GetMemberAsync(username);
