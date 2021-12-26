@@ -2,11 +2,7 @@
 using Lewy.Core;
 using Lewy.Core.DTOs;
 using Lewy.Core.Entities;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LewyApi.Helpers
 {
@@ -24,6 +20,7 @@ namespace LewyApi.Helpers
                             dest.Age, opt =>
                                     opt.MapFrom(src => src.DateOfBirth.CalculateAge()));
             CreateMap<Photo, PhotoDto>();
+            CreateMap<MemberUpdateDto, AppUser>();
         }
         
     }

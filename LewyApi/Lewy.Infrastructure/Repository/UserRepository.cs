@@ -59,7 +59,7 @@ namespace Lewy.Infrastructure
                 .SingleOrDefaultAsync(x => x.UserName == username);
         }
 
-        public async Task<bool> SAveAllAsync()
+        public async Task<bool> SaveAllAsync()
         {
             return await _context.SaveChangesAsync() > 0;
         }

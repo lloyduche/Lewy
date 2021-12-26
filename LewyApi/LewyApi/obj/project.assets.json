@@ -643,6 +643,7 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
           "Lewy.Core": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.12",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.12"
         },
         "compile": {
@@ -1746,6 +1747,7 @@
     "net5.0": [
       "AutoMapper >= 10.1.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
+      "Lewy.Core >= 1.0.0",
       "Lewy.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.12",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.12",
@@ -1789,6 +1791,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\hp\\source\\repos\\Lewy\\LewyApi\\Lewy.Core\\Lewy.Core.csproj": {
+              "projectPath": "C:\\Users\\hp\\source\\repos\\Lewy\\LewyApi\\Lewy.Core\\Lewy.Core.csproj"
+            },
             "C:\\Users\\hp\\source\\repos\\Lewy\\LewyApi\\Lewy.Infrastructure\\Lewy.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\hp\\source\\repos\\Lewy\\LewyApi\\Lewy.Infrastructure\\Lewy.Infrastructure.csproj"
             }
