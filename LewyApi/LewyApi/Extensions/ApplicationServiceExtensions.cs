@@ -1,4 +1,5 @@
-﻿using Lewy.Core.Interfaces;
+﻿using Lewy.Core;
+using Lewy.Core.Interfaces;
 using Lewy.Core.Services;
 using Lewy.Infrastructure;
 using LewyApi.Helpers;
@@ -12,6 +13,8 @@ namespace LewyApi.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config )
         {
+            services.Configure<CloudinarySettings>(config.GetSection("CloudinarySettings"));
+            services.AddScoped<IPhotoService, PhotoService>();
             services.AddScoped<ITokenService, TokenServices>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddAutoMapper(typeof(AutoMappersProfiles).Assembly);
