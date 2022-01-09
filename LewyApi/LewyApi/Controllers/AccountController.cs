@@ -1,4 +1,5 @@
-﻿using Lewy.Core.DTOs;
+﻿using AutoMapper;
+using Lewy.Core.DTOs;
 using Lewy.Core.Entities;
 using Lewy.Core.Interfaces;
 using Lewy.Infrastructure;
@@ -17,11 +18,13 @@ namespace LewyApi.Controllers
     {
         private readonly LewyContext _context;
         private readonly ITokenService _tokenService;
+        private readonly IMapper _mapper;
 
-        public AccountController(LewyContext context, ITokenService tokenService)
+        public AccountController(LewyContext context, ITokenService tokenService,IMapper mapper)
         {
             _context = context;
             _tokenService = tokenService;
+            _mapper = mapper;
         }
         
 
@@ -31,14 +34,13 @@ namespace LewyApi.Controllers
 
             if (await UserExist(registerDto.Username)) return BadRequest("Username is Taken");
 
-
+            var user = _mapper.Map<AppUser>(registerDto);
             using var hmac = new HMACSHA512();
-            var user = new AppUser
-            {
-                UserName = registerDto.Username.ToLower(),
-                PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password)),
-                PasswordSalt = hmac.Key
-            };
+
+            user.UserName = registerDto.Username.ToLower();
+            user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password));
+            user.PasswordSalt = hmac.Key;
+            
 
             _context.AppUsers.Add(user);
 
@@ -48,6 +50,7 @@ namespace LewyApi.Controllers
             {
                 Username = user.UserName,
                 Token = _tokenService.CreateToken(user),
+                KnownAs = user.KnownAs
                
             };
 
@@ -73,7 +76,8 @@ namespace LewyApi.Controllers
             {
                 Username = user.UserName,
                 Token = _tokenService.CreateToken(user),
-                PhotoUrl = user.Photos.FirstOrDefault(x => x.IsMain)?.Url
+                PhotoUrl = user.Photos.FirstOrDefault(x => x.IsMain)?.Url,
+                KnownAs = user.KnownAs 
             };
         }
 
